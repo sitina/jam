@@ -11,12 +11,8 @@ class Task {
 
     public String id, user, status, description
     public raw = [:], labels = []
-    public Integer estimate=0
 
     def String getAbbreivation(){
-        if (status.equals(TO_DO)) return "..."
-        if (user.startsWith("michal.mar")) return "OMG"
-
         def names = user.split("\\.")
         return (names[0].substring(0,1)+names[1].substring(0,2)).toUpperCase()
     }
